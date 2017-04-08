@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Rudra Narayan</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+</head>
+<body ng-app="rudraWeb">
+
+    <div class="header">
+       <div class="container">
+         <img class="headerImage" src="img/rudra.JPG">
+         <h1><a class="headerA" href="index.html"> Rudra Narayan's Portfolio</a></h1>
+         <a href="https://www.linkedin.com/in/rbanjara" class="align" target="_blank"><img src="img/linkedin.png" width="30px" /></a>
+        <a href="https://github.com/rudra28" class="align" target="_blank"><img src="img/github.png" width="30px" /></a>
+       </div>
+    </div>
+
+    <div class="controller" ng-controller="MainController">
+        <div class="container">
+     		<h2 class="titleClass">{{title}}</h2>
+
+             <div class="row">
+                <div  ng-repeat="detail in details" class="col-sm-4">
+          	        <div class="thumbnail">
+                       <img class="img" ng-src="{{detail.cover}}">
+                       <p class="project">{{detail.project}} <br><br> <a class="btn btn-primary" href="{{ detail.info }}">More Info</a> </p>
+                       <p class="title">{{ detail.name | uppercase }} </p>
+                       <p class="number"> {{ detail.number}}</p>
+                       <p class="date">{{detail.pubdate | date}} </p>   
+                    </div>
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div class="controller" ng-controller="MainController">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                </div>
+
+                <div class="col-sm-4">
+                   <div class="aIndex"><a class="btn btn-success" href="index.html">BACK</a></div>
+                </div>
+
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="footer">
+      <div class="container">
+        <h2>&copy Rudra Narayan Banjara</h2>
+        <p>narayan.rudra28@gmail.com | +1-(312)-804-0370</p>
+      </div>
+    </div>
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/rudraWeb.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+    <!-- Directives -->
+    
+
+</body>
+</html>
